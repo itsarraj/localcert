@@ -1,0 +1,30 @@
+[package]
+name = "localcert"
+version = "0.1.0"
+edition = "2021"
+description = "Local dev TLS certs, zero OpenSSL — a mkcert alternative in pure Rust"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/localcert"
+readme = "README.md"
+keywords = ["tls", "mkcert", "certificates", "https", "dev"]
+categories = ["cryptography", "command-line-utilities"]
+
+[lib]
+name = "localcert"
+path = "src/lib.rs"
+
+[[bin]]
+name = "localcert"
+path = "src/main.rs"
+
+[dependencies]
+rcgen = { version = "0.13", features = ["pem", "x509-parser"] }
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+dirs = "5"
+time = "0.3"
+
+[dev-dependencies]
+rustls = "0.23"
+rustls-pemfile = "2"
