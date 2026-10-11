@@ -6,6 +6,12 @@ seconds"; there's no canonical Rust equivalent, despite `rcgen` (pure-Rust
 cert generation, no OpenSSL/native dependency at all) being a mature
 building block for exactly this.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
